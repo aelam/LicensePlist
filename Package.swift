@@ -5,7 +5,8 @@ import PackageDescription
 let package = Package(
     name: "LicensePlist",
     products: [
-        .executable(name: "license-plist", targets: ["LicensePlist"]),
+        //.executable(name: "license-plist", targets: ["LicensePlist"]),
+        .executable(name: "LicensePlist", targets: ["LicensePlist"]),
         .library(name: "LicensePlistCore", targets: ["LicensePlistCore"]),
         .plugin(name: "LicensePlistPlugin", targets: ["LicensePlistPlugin"]),
     ],
@@ -31,7 +32,7 @@ let package = Package(
                 .target(name: "LicensePlist")
             ]
         ),
-        .target(
+        .executableTarget(
             name: "LicensePlist",
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
