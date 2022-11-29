@@ -14,12 +14,14 @@ struct LicensePlistPlugin: BuildToolPlugin, CommandPlugin {
         let packagePath = context.package.directory.string
 
         let url = URL(fileURLWithPath: executablePath.string)
-        let process = try Process.run(url, arguments: [packagePath])
+        print("================")
+        print(url)
+        let process = try Process.run(url, arguments: [])
         process.waitUntilExit()
 
         // Check whether the subprocess invocation was successful.
         if process.terminationReason == .exit && process.terminationStatus == 0 {
-            //print("Generated documentation at \(outputDir).")
+            print("Generated documentation at 234234")
         }
         else {
             let problem = "\(process.terminationReason):\(process.terminationStatus)"

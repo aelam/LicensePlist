@@ -27,7 +27,7 @@ let package = Package(
     targets: [
         .plugin(
             name: "LicensePlistPlugin",
-            capability: .buildTool(),
+            capability: .command(intent: PluginCommandIntent.custom(verb: "license", description: "Generate Licenses")),
             dependencies: [
                 .target(name: "LicensePlist")
             ]

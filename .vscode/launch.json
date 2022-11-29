@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug LicensePlist",
+            "program": "${workspaceFolder:LicensePlist}/.build/debug/LicensePlist",
+            "args": [],
+            "cwd": "${workspaceFolder:LicensePlist}",
+            "preLaunchTask": "swift: Build Debug LicensePlist"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release LicensePlist",
+            "program": "${workspaceFolder:LicensePlist}/.build/release/LicensePlist",
+            "args": [],
+            "cwd": "${workspaceFolder:LicensePlist}",
+            "preLaunchTask": "swift: Build Release LicensePlist"
+        }
+    ]
+}
